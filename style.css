@@ -1,0 +1,107 @@
+/* Estilos generales para todos los elementos */
+* {
+    text-align: center; /* Centra el texto en todos los elementos */
+    font-family: sans-serif; /* Usa una fuente sans-serif para todo el texto */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: rgb(255, 250, 230); /* Fondo de color beige claro */
+}
+
+/* Contenedor para los botones de colores */
+.colours {
+    display: flex; /* Usa flexbox para alinear los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+}
+
+/* Estilos para el botón rojo */
+.red {
+    height: 200px; /* Altura del botón */
+    width: 200px; /* Ancho del botón */
+    background-color: red; /* Color de fondo rojo */
+    border-radius: 10%; /* Bordes redondeados */
+    border: 2px solid black; /* Borde negro */
+    margin: 5px; /* Margen entre botones */
+}
+
+/* Estilos para el botón amarillo */
+.yellow {
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    border-radius: 10%;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+/* Estilos para el botón naranja */
+.orange {
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    border-radius: 10%;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+/* Estilos para el botón rosa */
+.pink {
+    height: 200px;
+    width: 200px;
+    background-color: pink;
+    border-radius: 10%;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+/* Estilos para el botón azul */
+.blue {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    border-radius: 10%;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+/* Estilos para el botón morado */
+.purple {
+    height: 200px;
+    width: 200px;
+    background-color: purple;
+    border-radius: 10%;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+/* Estilos para el botón verde */
+.green {
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    border-radius: 10%;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+/* Estilos para el botón café */
+.brown {
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+    border-radius: 10%;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+/* Estilos para el efecto de parpadeo (flash) */
+.flash {
+    opacity: 5%; /* Reduce la opacidad para simular un parpadeo */
+}
+
+/* Estilos para el efecto de parpadeo del usuario (userflash) */
+.userflash {
+    background-color: black; /* Cambia el fondo a negro */
+    opacity: 5%; /* Reduce la opacidad para simular un parpadeo */
+}
