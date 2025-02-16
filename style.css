@@ -1,107 +1,220 @@
 /* Estilos generales para todos los elementos */
 * {
-    text-align: center; /* Centra el texto en todos los elementos */
-    font-family: sans-serif; /* Usa una fuente sans-serif para todo el texto */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Estilos para el cuerpo de la página */
 body {
-    background-color: rgb(255, 250, 230); /* Fondo de color beige claro */
+    background-color: #f0f0f0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Asegurarse que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+    padding: 20px;
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-size: 4rem; /* Tamaño grande para pantallas grandes */
+    color: #333;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el subtítulo */
+h2 {
+    font-size: 2rem; /* Tamaño grande para pantallas grandes */
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Estilos para la puntuación más alta */
+h4 {
+    font-size: 1.5rem; /* Tamaño grande para pantallas grandes */
+    color: #777;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 2rem; /* Tamaño grande para pantallas grandes */
+    color: #333;
+    margin-bottom: 30px;
 }
 
 /* Contenedor para los botones de colores */
 .colours {
-    display: flex; /* Usa flexbox para alinear los botones */
-    justify-content: center; /* Centra los botones horizontalmente */
+    display: flex;
+    flex-direction: row; /* Disposición horizontal */
+    gap: 20px; /* Espacio entre botones */
+    justify-content: center;
+    flex-wrap: wrap; /* Para que los botones se ajusten en pantallas pequeñas */
 }
 
-/* Estilos para el botón rojo */
+/* Estilos base para los botones de colores */
+.btns {
+    height: 150px; /* Tamaño grande para pantallas grandes */
+    width: 150px; /* Tamaño grande para pantallas grandes */
+    border-radius: 20px; /* Bordes más redondeados */
+    border: 3px solid #000; /* Borde más grueso */
+    margin: 10px; /* Margen alrededor de los botones */
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Efecto hover para los botones */
+.btns:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Estilos específicos para cada color */
 .red {
-    height: 200px; /* Altura del botón */
-    width: 200px; /* Ancho del botón */
-    background-color: red; /* Color de fondo rojo */
-    border-radius: 10%; /* Bordes redondeados */
-    border: 2px solid black; /* Borde negro */
-    margin: 5px; /* Margen entre botones */
+    background-color: #ff0000;
 }
 
-/* Estilos para el botón amarillo */
 .yellow {
-    height: 200px;
-    width: 200px;
-    background-color: yellow;
-    border-radius: 10%;
-    border: 2px solid black;
-    margin: 5px;
+    background-color: #ffff66;
 }
 
-/* Estilos para el botón naranja */
 .orange {
-    height: 200px;
-    width: 200px;
-    background-color: orange;
-    border-radius: 10%;
-    border: 2px solid black;
-    margin: 5px;
+    background-color: #ffa64d;
 }
 
-/* Estilos para el botón rosa */
 .pink {
-    height: 200px;
-    width: 200px;
-    background-color: pink;
-    border-radius: 10%;
-    border: 2px solid black;
-    margin: 5px;
+    background-color: #ff66b3;
 }
 
-/* Estilos para el botón azul */
 .blue {
-    height: 200px;
-    width: 200px;
-    background-color: blue;
-    border-radius: 10%;
-    border: 2px solid black;
-    margin: 5px;
+    background-color: #0000ff;
 }
 
-/* Estilos para el botón morado */
 .purple {
-    height: 200px;
-    width: 200px;
-    background-color: purple;
-    border-radius: 10%;
-    border: 2px solid black;
-    margin: 5px;
+    background-color: #800080;
 }
 
-/* Estilos para el botón verde */
 .green {
-    height: 200px;
-    width: 200px;
-    background-color: green;
-    border-radius: 10%;
-    border: 2px solid black;
-    margin: 5px;
+    background-color: #66ff66;
 }
 
-/* Estilos para el botón café */
 .brown {
-    height: 200px;
-    width: 200px;
-    background-color: brown;
-    border-radius: 10%;
-    border: 2px solid black;
-    margin: 5px;
+    background-color: #996633;
+}
+
+/* Estilos para los nuevos colores */
+.cyan {
+    background-color: #00ffff; /* Cian */
+}
+
+.teal {
+    background-color: #008080; /* Verde azulado */
+}
+
+.gray {
+    background-color: #c0c0c0; /* Gris */
+}
+
+.black {
+    background-color: #000000; /* Negro */
 }
 
 /* Estilos para el efecto de parpadeo (flash) */
 .flash {
-    opacity: 5%; /* Reduce la opacidad para simular un parpadeo */
+    opacity: 0.2; /* Hacemos el flash más notorio */
+    background-color: white; /* Cambiamos el fondo a blanco durante el flash */
+    transition: opacity 0.2s ease;
 }
 
 /* Estilos para el efecto de parpadeo del usuario (userflash) */
 .userflash {
-    background-color: black; /* Cambia el fondo a negro */
-    opacity: 5%; /* Reduce la opacidad para simular un parpadeo */
+    background-color: black; /* Cambiamos el fondo a negro durante el userflash */
+    opacity: 0.2; /* Hacemos el userflash más notorio */
+    transition: opacity 0.2s ease;
+}
+
+/* Media Queries para diseño responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem; /* Reducimos el tamaño del título en pantallas más pequeñas */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reducimos el tamaño del subtítulo en pantallas más pequeñas */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Reducimos el tamaño de la puntuación en pantallas más pequeñas */
+    }
+
+    h4 {
+        font-size: 1.2rem; /* Reducimos el tamaño del texto en pantallas más pequeñas */
+    }
+
+    .btns {
+        height: 100px; /* Reducimos el tamaño de los botones en pantallas más pequeñas */
+        width: 100px;
+    }
+
+    .colours {
+        gap: 10px; /* Reducimos el espacio entre botones en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Tamaño aún más pequeño para pantallas muy pequeñas */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Tamaño aún más pequeño para pantallas muy pequeñas */
+    }
+
+    h3 {
+        font-size: 1.2rem; /* Tamaño aún más pequeño para pantallas muy pequeñas */
+    }
+
+    h4 {
+        font-size: 1rem; /* Tamaño aún más pequeño para pantallas muy pequeñas */
+    }
+
+    .btns {
+        height: 70px; /* Tamaño aún más pequeño para pantallas muy pequeñas */
+        width: 70px;
+    }
+
+    .colours {
+        gap: 5px; /* Espacio aún más reducido entre botones */
+    }
+
+    /* Ajustes para reorganizar los botones en pantallas muy pequeñas */
+    .row4 {
+        display: flex;
+        flex-wrap: wrap; /* Permitimos que los botones se ajusten en filas */
+        gap: 5px; /* Espacio reducido entre los botones */
+        justify-content: center; /* Centramos los botones */
+    }
+
+    /* Aseguramos que los botones estén en filas de dos */
+    .row4 .btns {
+        flex: 1 1 calc(50% - 10px); /* Dos botones por fila con espacio entre ellos */
+        max-width: calc(50% - 10px); /* Limita el ancho de los botones */
+    }
+
+    /* Movemos el plateado y el negro a la fila del café */
+    .row4 .silver,
+    .row4 .black {
+        order: 1; /* Colocamos plateado y negro después del café */
+    }
+
+    .row4 .green {
+        order: 0; /* El verde se mantiene en su posición */
+    }
+
+    .row4 .brown {
+        order: 0; /* El café se mantiene en su posición */
+    }
 }
