@@ -11,6 +11,10 @@ let blue = document.querySelector(".blue");
 let purple = document.querySelector(".purple");
 let green = document.querySelector(".green");
 let brown = document.querySelector(".brown");
+let cyan = document.querySelector(".cyan");
+let teal = document.querySelector(".teal");
+let gray = document.querySelectorAll(".gray");
+let black = document.querySelectorAll(".black");
 
 // Variables de estado del juego
 let game = false; // Indica si el juego está en curso
@@ -18,7 +22,7 @@ let level = 0;    // Nivel actual del juego
 let h2 = document.querySelector("h2"); // Elemento para mostrar el nivel
 
 // Array de colores disponibles y variables de puntuación
-let colours = ["red", "orange", "blue", "yellow", "pink", "purple", "green", "brown"];
+let colours = ["red", "orange", "blue", "yellow", "pink", "purple", "green", "brown", "cyan", "teal", "gray", "black"];
 let score = 0;
 let highscore = document.querySelector("h3"); // Elemento para mostrar la puntuación más alta
 highscore.innerText = 0;
@@ -54,7 +58,7 @@ function levelup() {
     h2.innerText = `Nivel ${level}`; // Actualiza el texto del nivel
 
     // Selecciona un color aleatorio y lo añade a la secuencia del juego
-    let rand = Math.floor(Math.random() * 8);
+    let rand = Math.floor(Math.random() * 12);
     let randindex = colours[rand];
     let randcolour = document.querySelector(`.${randindex}`);
     gameseq.push(randindex); // Añade el color a la secuencia del juego
@@ -64,6 +68,12 @@ function levelup() {
 
 // Función que se ejecuta cuando el usuario hace clic en un botón
 function buttonpress() {
+    if (!game) {
+        // Si el juego no ha comenzado, no hacer nada o mostrar un mensaje
+        h2.innerText = "¡Presiona Enter para empezar!";
+        return; // Salir de la función sin hacer nada más
+    }
+
     let btn = this;
     let colour = btn.getAttribute("id"); // Obtiene el color del botón presionado
     userseq.push(colour);                // Añade el color a la secuencia del usuario
